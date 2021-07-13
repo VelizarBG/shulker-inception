@@ -3,7 +3,7 @@
 
 name: Pull Request Builds
 
-on: [pull_request]
+on: [pull_request, push]
 
 jobs:
   Build:
