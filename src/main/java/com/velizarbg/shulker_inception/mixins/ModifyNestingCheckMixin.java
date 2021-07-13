@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ShulkerBoxSlot.class)
-public abstract class RemoveNestingCheckMixin {
+public abstract class ModifyNestingCheckMixin {
     @Inject(method = "canInsert", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/Item;canBeNested()Z"), cancellable = true)
     private void injected(CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(true);
